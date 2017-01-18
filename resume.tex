@@ -1,5 +1,32 @@
+% we use an article with 3/4 inch margins
 \documentclass{article}
+\usepackage[margin=0.75in]{geometry}
+
+% we don't want any page numbers on a resume!
+\pagenumbering{gobble}
+
+% defines a variable thickness horizontal rule we'll use later
+\def\hrulefillvar#1{\leaders\hrule height #1\hfill}
+
+% document body
 \begin{document}
-  \title{Nathan Spencer}
-  Testing 1 2 3
+
+  % name header
+  \LARGE
+  \textsc{Nathan Spencer}
+  \hrulefillvar{0.5pt}
+  \normalsize
+
+  % Beginning of two-column tabular layout
+  \begin{tabular}{@{}p{3cm}@{\hspace{0.2cm}}p{13cm}@{}}
+
+    % Contact information section
+    \enspace CONTACT \newline INFORMATION &
+    \enspace 509 McLane Ave., Apt. 1
+    \newline Morgantown, WV 26505
+    \newline 1 (304) 692-1027
+    \newline nathantspencer@gmail.com \\
+
+  \end{tabular}
+
 \end{document}
