@@ -1,40 +1,50 @@
 % we use an article with 3/4 inch margins
 \documentclass{article}
 \usepackage[margin=0.75in]{geometry}
+\usepackage[pdftex]{graphicx}
+\graphicspath{{/Users/nathantspencer/resume_cv/imgs/}}
+
 
 % we don't want any page numbers on a resume!
 \pagenumbering{gobble}
-
-% defines a variable thickness horizontal rule we'll use later
-\def\hrulefillvar#1{\leaders\hrule height #1\hfill}
 
 % document body
 \begin{document}
 
   % name header
-  \LARGE
-  \textsc{Nathan Spencer}
-  \vspace{-0.2cm}  % hack to bring rule & document up to title line
-  \par
-  \rule{\textwidth}{0.75pt}
+  \LARGE\textsc{Nathan Spencer}
+  \vspace{-0.2cm}
+  \par\rule{\textwidth}{0.5pt}
   \normalsize
 
-  % Beginning of two-column tabular layout
-  \begin{tabular}{@{}p{3cm}@{\hspace{0.2cm}}p{13cm}@{}}
+  % beginning of two-column tabular layout
+  \begin{tabular}{@{}p{2.5cm}@{\hspace{0.2cm}}p{13cm}@{}}
 
-    % Contact information section
-    \enspace \textsc{Contact} \newline \textsc{Information} &
+    % contact information section
+    \enspace\textsc{Contact}\newline\textsc{Information} &
     \enspace 509 McLane Ave., Apt. 1
+      % github contact
+      \hspace{1cm}
+      \small\raisebox{-0.06cm}{\includegraphics[height=0.3cm]{github.pdf}}
+      \, github.com/nathantspencer
     \newline Morgantown, WV 26505
+      % linkedin contact
+      \hspace{1.462cm}
+      \small\raisebox{-0.06cm}{\includegraphics[height=0.3cm]{linkedin.pdf}}
+      \, linkedin.com/in/nathantspencer
+      \hspace{-1.462cm}
     \newline +1 (304) 692-1027
     \newline nathantspencer@gmail.com \\
 
-    % Education section
-    \enspace \textsc{Education} &
-    \enspace \textbf{West Virginia University}
-    \small \emph{(August 2014 - Present)} \normalsize
+    % education section
+    \enspace\textsc{Education} &
+    \enspace\textbf{West Virginia University}
+    \small\emph{(August 2014 - Present)} \normalsize
     \newline Pursuing B.S. in Computer Science \& B.S. in Computer Engineering
-    \newline Overall GPA: 3.617, Major GPA: 3.593
+    \newline Overall GPA: 3.617, Major GPA: 3.593 \\
+
+    % education section
+    \enspace\textsc{Relevant}\newline\textsc{Experience} & \\
 
   \end{tabular}
 
