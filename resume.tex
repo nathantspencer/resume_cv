@@ -2,8 +2,8 @@
 \documentclass{article}
 \usepackage[margin=0.75in]{geometry}
 \usepackage[pdftex]{graphicx}
+\usepackage{enumitem}
 \graphicspath{{/Users/nathantspencer/resume_cv/imgs/}}
-
 
 % we don't want any page numbers on a resume!
 \pagenumbering{gobble}
@@ -13,8 +13,8 @@
 
   % name header
   \huge Nathan Spencer
-  \vspace{-0.2cm}
-  \par\rule{\textwidth}{0.5pt}
+  \vspace{-0.16cm}
+  \par\rule{15.75cm}{0.5pt}
   \normalsize
 
   % beginning of two-column tabular layout
@@ -39,12 +39,33 @@
     % education section
     \enspace\textsc{Education} &
     \enspace\textbf{West Virginia University}
-    \small\emph{(August 2014 - Present)} \normalsize
+    \small\emph{(August 2014 - Present)}\normalsize
     \newline Pursuing B.S. in Computer Science \& B.S. in Computer Engineering
     \newline Overall GPA: 3.617, Major GPA: 3.593 \\
 
     % education section
-    \enspace\textsc{Relevant}\newline\textsc{Experience} & \\
+    \enspace\textsc{Relevant}\newline\textsc{Experience} &
+    \enspace\begin{itemize}[leftmargin=*,nolistsep]
+      % most recent experience
+      \item[--]\textbf{Undergraduate Research Assistant}
+      \small\emph{(May 2015 - July 2015)}\normalsize
+      \newline West Virginia University Vision Lab
+      \par\,\small
+      Researched machine learning and used deep learning frameworks including
+      VLFeat and Caffee to create and train classification models as a member of
+      WVU's Computer Vision Lab. Contributed a highly competitive model for food
+      recognition tested on the prevalent Food-101 dataset.
+      \normalsize
+      % next most recent
+      \newline\item[--]\textbf{Research Assistant Intern}
+      \small\emph{(June 2012 - August 2012)}\normalsize
+      \newline West Virginia University Ultrafast Nanophotonics Group
+      \par\,\small
+      Paid summer research internship with WVU's Ultrafast Nanophotonics Group.
+      Probed samples to determine their optical and electrical properties in a
+      laser lab and analyzed data using MATLAB scripts.
+      \normalsize
+    \end{itemize}\\
 
   \end{tabular}
 
