@@ -3,10 +3,17 @@
 \usepackage[margin=0.75in]{geometry}
 \usepackage[pdftex]{graphicx}
 \usepackage{enumitem}
+\usepackage{amssymb}
 \graphicspath{{/Users/nathantspencer/resume_cv/imgs/}}
 
 % we don't want any page numbers on a resume!
 \pagenumbering{gobble}
+
+% define a dot larger than cdot but smaller than textbullet
+\makeatletter
+\newcommand*\bigcdot{\mathpalette\bigcdot@{.5}}
+\newcommand*\bigcdot@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
+\makeatother
 
 % document body
 \begin{document}
@@ -22,9 +29,9 @@
 
     % contact information section
     \enspace\textsc{Contact}\newline\textsc{Information} &
-    \enspace 509 McLane Ave., Apt. 1
+    \enspace 720 McKinley Ave.
       % github contact
-      \hspace{1cm}
+      \hspace{1.91cm}
       \small\raisebox{-0.06cm}{\includegraphics[height=0.3cm]{github.pdf}}
       \, github.com/nathantspencer
     \newline Morgantown, WV 26505
@@ -34,14 +41,14 @@
       \, linkedin.com/in/nathantspencer
       \hspace{-1.462cm}
     \newline +1 (304) 692-1027
-    \newline nathantspencer@gmail.com \\
+    \newline ntspencer@mix.wvu.edu \\
 
     % education section
     \enspace\textsc{Education} &
     \enspace\textbf{B.S., Computer Science, Computer Engineering}
     \hfill\small(Aug. 2014 - Present)\normalsize
-    \newline West Virginia University\small
-    \newline Overall GPA 3.617
+    \newline West Virginia University, Morgantown, WV \small
+    \newline Overall GPA 3.617, UPE President
     \normalsize \\
 
     % experience section
@@ -93,12 +100,12 @@
         \item[--]Built scraper using Python modules Beautiful Soup, Requests
         \item[--]Scraped 7k+ entries of data on invertebrate vectors of human pathogens
         \item[--]Resulting data used by WVU Biology lab group for upcoming publication
-        \end{itemize}\\
+        \end{itemize} \\
     \normalsize
 
     % skills section
     \textsc{Skills} &
-    Add some skills here. \\
+    Some skills will someday be here. \\
 
     % references section
     \enspace\textsc{References} &
