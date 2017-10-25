@@ -1,58 +1,75 @@
+%=====| Written by Nathan Spencer
+%=====| -> Last updated October 2017
+%=====| -> Feel free to use this as a template!
+%=====| -> Questions? Contact me at ntspencer@mix.wvu.edu
+
 % we use an article with 3/4 inch margins
 \documentclass{article}
 \usepackage[margin=0.75in]{geometry}
 \usepackage[pdftex]{graphicx}
 \usepackage{enumitem}
 \usepackage{amssymb}
-\graphicspath{{/Users/nathantspencer/resume_cv/imgs/}}
+
+% sets path to images used
+\graphicspath{{/Users/nathantspencer/resume_cv/images/}}
 
 % we don't want any page numbers on a resume!
 \pagenumbering{gobble}
-
-% define a dot larger than cdot but smaller than textbullet
-\makeatletter
-\newcommand*\bigcdot{\mathpalette\bigcdot@{.5}}
-\newcommand*\bigcdot@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
-\makeatother
-
-% document body
 \begin{document}
 
-  % name header
-  \huge Nathan Spencer
-  \vspace{-0.16cm}
-  \par\rule{15.75cm}{0.5pt}
-  \normalsize
+%==============================================================================%
+%-----------------------------------| HEADER |---------------------------------%
+%==============================================================================%
 
-  % beginning of two-column tabular layout
-  \begin{tabular}{@{}p{2.5cm}@{\hspace{0.2cm}}p{13cm}@{}}
+\huge Nathan Spencer
+\vspace{-0.16cm}
+\par\rule{15.75cm}{0.5pt}
+\normalsize
 
-    % contact information section
+% beginning of two-column tabular layout
+\begin{tabular}{@{}p{2.5cm}@{\hspace{0.2cm}}p{13cm}@{}}
+
+%==============================================================================%
+%----------------------------| CONTACT INFORMATION |---------------------------%
+%==============================================================================%
+
     \enspace\textsc{Contact}\newline\textsc{Information} &
-    \enspace 720 McKinley Ave.
-      % github contact
-      \hspace{1.91cm}
-      \small\raisebox{-0.06cm}{\includegraphics[height=0.3cm]{github.pdf}}
-      \, github.com/nathantspencer
-    \newline Morgantown, WV 26505
-      % linkedin contact
-      \hspace{1.462cm}
-      \small\raisebox{-0.06cm}{\includegraphics[height=0.3cm]{linkedin.pdf}}
-      \, linkedin.com/in/nathantspencer
-      \hspace{-1.462cm}
-    \newline +1 (304) 692-1027
-    \newline ntspencer@mix.wvu.edu \\
 
-    % experience section
+% (1) Address Line 1
+\enspace 720 McKinley Ave.
+%
+% (2) Github Account Link
+\hspace{1.91cm}
+\small\raisebox{-0.06cm}{\includegraphics[height=0.3cm]{github.pdf}}
+\, github.com/nathantspencer
+
+% (3) Address Line 2
+Morgantown, WV 26505
+%
+% (4) LinkedIn Account Link
+\hspace{1.462cm}
+\small\raisebox{-0.06cm}{\includegraphics[height=0.3cm]{linkedin.pdf}}
+\, linkedin.com/in/nathantspencer
+\hspace{-1.462cm}
+
+% (5) Phone Number
++1 (304) 692-1027
+
+% (6) Email
+ntspencer@mix.wvu.edu \\
+
+%==============================================================================%
+%---------------------------------| EXPERIENCE |-------------------------------%
+%==============================================================================%
     \enspace\textsc{Work}\newline\textsc{History} &
     % most recent experience
     \enspace\textbf{Undergraduate Full-Stack Developer}
     \hfill\small(May 2016 - Present)\normalsize
-    \newline West Virginia University Sensory Neuroscience Research Center
+    \newline IstoVisio, Inc.
     \par\,\small
         \begin{itemize}[leftmargin=*,nolistsep,noitemsep]
-        \item[--]Used C++ and OpenGL to develop data visualization and annotation tools for VR
-        \item[--]Built Python pipeline to translate complex graph data into models of neuron structure
+        \item[--]Developed novel data visualization and annotation tools for VR in C++, OpenGL
+        \item[--]Contributed to professional version and project management using Git, Redmine
         \newline
         \end{itemize}
     \normalsize
@@ -73,20 +90,28 @@
     \hfill\small(June 2012 - Aug. 2012)\normalsize
     \newline West Virginia University Ultrafast Nanophotonics Group
     \par\,\small
-      \begin{itemize}[leftmargin=*,nolistsep,noitemsep]
+      \begin{itemize}[leftmargin=*, nolistsep,noitemsep]
       \item[--]Designed optics setup to probe materials for optical properties
       \item[--]Wrote MATLAB scripts to process, analyze, and visualize resulting data
-      \end{itemize}\\
-    %Paid summer research internship with WVU's Ultrafast Nanophotonics Group.
-    %Probed samples to determine their optical and electrical properties in a
-    %laser lab and analyzed data using MATLAB scripts.
-    \normalsize
+      \end{itemize}
+    \normalsize \\
 
-    % skills section
+%==============================================================================%
+%-----------------------------------| SKILLS |---------------------------------%
+%==============================================================================%
+
     \textsc{Skills} &
-    Some skills will someday be here. \\
+      \begin{tabular}{@{}lll@{}}
+          -- C++11/14 & -- Git \& Github & -- Python \\
+          -- Team Communication & -- Image Processing & -- OpenGL \\
+          -- Web Scraping & -- CI Tools & -- API Design \\
+          -- User Interfaces & -- \LaTeX \\
+      \end{tabular} \\
 
-    % education section
+%==============================================================================%
+%---------------------------------| EDUCATION |--------------------------------%
+%==============================================================================%
+
     \enspace\textsc{Education} &
     \enspace\textbf{B.S. Computer Science, Computer Engineering}
     \hfill\small(Aug. 2014 - Present)\normalsize
@@ -94,7 +119,10 @@
     \newline Overall GPA 3.666 / Major GPA 3.620
     \normalsize \\
 
-    % projects section
+%==============================================================================%
+%-----------------------------| RELEVANT PROJECTS |----------------------------%
+%==============================================================================%
+
     \enspace\textsc{Relevant}\newline\textsc{Projects} &
     % most recent project
     \enspace\textbf{Bioinformatics Web Scraper}
@@ -107,9 +135,6 @@
         \end{itemize} \\
     \normalsize
 
-    % references section
-    \textsc{References} &
-    Available upon request. \\
 
   \end{tabular}
 
